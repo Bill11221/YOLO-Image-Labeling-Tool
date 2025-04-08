@@ -50,3 +50,44 @@ nmake
 To ensure normal runtime, all Qt dependent libraries need to be deployed together. It is recommended to use the `windeployqt` tool that comes with Qt:
 ```bash
 windeployqt YoloAnnotator.exe
+
+
+###Future improvement directions
+
+Responsive and adaptive function upgrade
+Image zoom and pan: At present, it is possible to consider expanding the image editing area and using QGraphicsView to implement more interactive operations, such as fine zooming, rotation, and panning, so that users can more easily view details and the entire image when annotating.
+
+Responsive layout: Further optimize the adaptation of windows and controls, especially the display effect and operation experience under high resolution and touch devices (such as tablets).
+
+Multi-category annotation and data management
+
+Category management: Add a category selection drop-down menu and shortcut keys to support simultaneous annotation of different categories, and reflect category information in the annotation results in real time.
+
+Configuration and database: Design a configuration file (such as JSON) or use SQLite database to manage configuration information such as categories, colors, shortcut keys, etc., to facilitate user customization and expansion.
+
+Data statistics and browsing: Develop a statistical module to display and statistically analyze the number of annotations, category distribution, annotation quality, etc., to provide a reference for subsequent data cleaning and model training.
+
+Annotation editing and undo-redo functions
+
+Annotation editing: Add editing functions for selecting, resizing and positioning the drawn annotation box. QGraphicsItem can be used to drag, zoom and interact with the annotation box.
+
+Undo/redo: Combine Qt's QUndoStack to implement undo and redo functions, so that users can quickly restore the previous state when they make mistakes, improving annotation efficiency.
+
+Format export and data compatibility
+
+On the basis of the current support for YOLO format, other popular annotation formats can be added, such as Pascal VOC (XML) or COCO (JSON), which can meet the needs of different deep learning platforms.
+
+At the same time, batch processing and automatic conversion functions are supported, which can organize a batch of annotation files into a data set according to the specified format for subsequent use.
+
+Interface and animation effect upgrade
+
+Further use of QSS and tools such as QPropertyAnimation and QStateMachine to enhance interface animation effects, such as button hover animation, operation feedback animation, etc., to make the user experience smoother and more modern.
+
+If project requirements allow, you can also consider introducing some Qt Quick/QML components to achieve more complex and dynamic interface effects and interaction logic.
+
+Continuous integration and automated testing
+
+Combined with CI tools (such as GitHub Actions), automatically perform compilation, unit testing, and packaging to ensure that each submission is automatically checked to reduce problems in the released version.
+
+Develop unit tests and UI tests, and use the Qt Test framework to test the main functions to ensure that the improved version is more stable and efficient.
+
