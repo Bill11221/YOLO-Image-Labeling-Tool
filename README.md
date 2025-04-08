@@ -52,6 +52,9 @@ To ensure normal runtime, all Qt dependent libraries need to be deployed togethe
 windeployqt YoloAnnotator.exe
 
 
+
+
+
 ### Future improvement directions
 
 Responsive and adaptive function upgrade
