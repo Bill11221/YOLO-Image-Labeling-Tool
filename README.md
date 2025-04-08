@@ -52,7 +52,7 @@ To ensure normal runtime, all Qt dependent libraries need to be deployed togethe
 windeployqt YoloAnnotator.exe
 
 
-**###Future improvement directions**
+### Future improvement directions
 
 Responsive and adaptive function upgrade
 Image zoom and pan: At present, it is possible to consider expanding the image editing area and using QGraphicsView to implement more interactive operations, such as fine zooming, rotation, and panning, so that users can more easily view details and the entire image when annotating.
