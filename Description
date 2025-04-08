@@ -1,0 +1,7 @@
+Description
+Build method:
+This project uses a single-file mode. All classes with Q_OBJECT (such as ImageLabel and MainWindow) are placed in main.cpp. Use #include "main.moc" to automatically include the generated meta-object code.
+Only main.cpp is listed in the .pro file (no additional header file is required) to ensure that MOC files are not generated repeatedly and multiple definitions are avoided.
+
+Deployment:
+After the build is successful, please use the windeployqt tool (or other methods) to package the Qt dependency library into the output directory so that the exe file can run on a machine without a Qt environment.
